@@ -18,7 +18,7 @@
   <script src="https://replit.com/public/js/replit-badge.js" theme="red" defer></script> 
 </body> 
   <h1 In Ancient Egypt the society differed slightly from ours.</h1>
-
+<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 <div class="zoom"> 
 
 <img src="https://www.tealschool.se/wp-content/uploads/2019/12/pyramid-egypt.png"alt="image" >
@@ -31,5 +31,30 @@
   </div>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+
+<script>
+
+var xValues = [-3000,-2000, -1500, -1000, 1000, 1800, 1850];
+var yValues = [700000, 2000000, 1500000, 3500000, 4000000, 3000000, 4800000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  
+});
+</script>
 
 </html>
